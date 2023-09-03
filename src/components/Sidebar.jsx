@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import sir from "../../public/sir.jpeg";
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
@@ -16,16 +17,30 @@ const Sidebar = () => {
       <div className="w-full shadow-xl border rounded-md mb-5">
         <h1 className="text-center py-2 bg-slate-200">অধ্যক্ষ </h1>
         <div className=" flex flex-col  items-start gap-5 py-5 px-8">
-          <h5 className="border-b-2 border-gray-200 w-full py-1">
-            কারিগরি শিক্ষা বোর্ড{" "}
-          </h5>
-          <h5 className="border-b-2 border-gray-200 w-full py-1">
-            কারিগরি শিক্ষা অধিদপ্তর
-          </h5>
-          <h5 className="border-b-2 border-gray-200 w-full py-1">
+          <Link
+            className="border-b-2 border-gray-200 w-full py-1 hover:text-blue-500"
+            href={"http://www.educationboardresults.gov.bd/"}
+          >
+            শিক্ষা বোর্ডের ফলাফল{" "}
+          </Link>
+          <Link
+            className="border-b-2 border-gray-200 w-full py-1 hover:text-blue-500"
+            href={"https://teachers.gov.bd/"}
+          >
+            ডিজিটাল কন্টেন্ট
+          </Link>
+          <Link
+            className="border-b-2 border-gray-200 w-full py-1 hover:text-blue-500"
+            href={"https://moedu.gov.bd/"}
+          >
             শিক্ষা মন্ত্রণালয়
-          </h5>
-          <h5 className="border-b-2 border-gray-200 w-full py-1">বিডি জবস</h5>
+          </Link>
+          <Link
+            className="border-b-2 border-gray-200 w-full py-1 hover:text-blue-500"
+            href={"http://www.nctb.gov.bd/"}
+          >
+            এনসিটিবি
+          </Link>
         </div>
       </div>
       <div className="w-full shadow-xl border rounded-md mb-5">

@@ -13,8 +13,8 @@ export default function Navbar() {
     <>
       <div className="max-w-md md:max-w-6xl h-24 m-auto bg-white px-5 py-1">
         <div className="navbar bg-cyan-900 text-white">
-          <div className="flex justify-center flex-1 px-2">
-            <div className="flex items-stretch">
+          <div className="flex justify-center flex-1 px-4">
+            <div className="flex justify-between w-full items-stretch">
               <div className="dropdown dropdown-start mx-1">
                 <label tabIndex={0} className="btn btn-ghost rounded-btn">
                   <AiFillHome />
@@ -35,64 +35,34 @@ export default function Navbar() {
                     <Link href={"/teacher"}>শিক্ষক গণের তালিকা</Link>
                   </li>
                   <li>
-                    <a>কর্মকর্তা/কর্মচারী তালিকা</a>
+                    <Link href={"/committee"}>কর্মকর্তা/কর্মচারী তালিকা</Link>
                   </li>
                 </ul>
               </div>
               <div className="dropdown dropdown-start mx-1">
                 <label tabIndex={0} className="btn btn-ghost rounded-btn">
                   <BiFoodMenu />
-                  ফলাফল
-                  <IoIosArrowDown />
+                  <Link href={"/result"}>ফলাফল</Link>
                 </label>
-                <ul
-                  tabIndex={0}
-                  className="menu dropdown-content z-[1] p-2 shadow bg-white text-black rounded-box w-52 mt-4"
-                >
-                  <li>
-                    <a>কম্পিউটার </a>
-                  </li>
-                  <li>
-                    <a>ইলেকট্রনিক্স </a>
-                  </li>
-                  <li>
-                    <a>আর্কিটেকচার </a>
-                  </li>
-                  <li>
-                    <a>সিভিল</a>
-                  </li>
-                </ul>
               </div>
               <div className="dropdown dropdown-start mx-1">
                 <label tabIndex={0} className="btn btn-ghost rounded-btn">
-                  <IoHardwareChipOutline />
-                  টেকনোলজি
-                </label>
-              </div>
-              <details className="dropdown mx-1">
-                <summary tabIndex={0} className="btn btn-ghost rounded-btn">
                   <AiOutlineMenu />
-                  ছাত্র-ছাত্রীর
+                  ছাত্র-ছাত্রী
                   <IoIosArrowDown />
-                </summary>
+                </label>
                 <ul
                   tabIndex={0}
                   className="menu dropdown-content z-[1] p-2 shadow bg-white text-black rounded-box w-52 mt-4"
                 >
                   <li>
-                    <a>কম্পিউটার </a>
+                    <Link href={"/students"}>ছাত্র-ছাত্রী </Link>
                   </li>
                   <li>
-                    <a>ইলেকট্রনিক্স </a>
-                  </li>
-                  <li>
-                    <a>আর্কিটেকচার </a>
-                  </li>
-                  <li>
-                    <a>সিভিল</a>
+                    <Link href={"/class-wise-students"}>ক্লাস অনুযায়ী </Link>
                   </li>
                 </ul>
-              </details>
+              </div>
               <div className="dropdown dropdown-start mx-1">
                 <label tabIndex={0} className="btn btn-ghost rounded-btn">
                   <BiFoodMenu />
@@ -104,22 +74,10 @@ export default function Navbar() {
                   className="menu dropdown-content z-[1] p-2 shadow bg-white text-black rounded-box w-52 mt-4"
                 >
                   <li>
-                    <Link
-                      href={
-                        "https://dschool2.appsosis.com/notice/oomcWIb1bgjzKjppwiSrhkQBwicnTMELU8XiyKTO.pdf"
-                      }
-                    >
-                      ক্লাস রুটিন{" "}
-                    </Link>
+                    <Link href={"/class-routine"}>ক্লাস রুটিন </Link>
                   </li>
                   <li>
-                    <Link
-                      href={
-                        "https://dschool2.appsosis.com/notice/3UWhSicTITsDMHz7DTEeieVrwDXjcUYLbL0171FP.pdf"
-                      }
-                    >
-                      পরীক্ষা রুটিন{" "}
-                    </Link>
+                    <Link href={"/exam-routine"}>পরীক্ষা রুটিন </Link>
                   </li>
                 </ul>
               </div>

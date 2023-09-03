@@ -58,7 +58,7 @@ const Footer = () => {
         <h2>
           Design&Developed by{" "}
           <Link
-            href={"https://cronyco.net/"}
+            href={"https://appsosis.com/"}
             className="border-b-2 border-dotted"
           >
             AppsOsis

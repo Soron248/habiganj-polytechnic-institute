@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: ["dschool2.appsosis.com"],
+    unoptimized: true,
   },
   output: "export",
 };

@@ -32,7 +32,7 @@ export default function Navbar() {
                   className="menu dropdown-content z-[1] p-2 shadow bg-white text-black rounded-box w-52 mt-4"
                 >
                   <li>
-                    <a>শিক্ষক গণের তালিকা</a>
+                    <Link href={"/teacher"}>শিক্ষক গণের তালিকা</Link>
                   </li>
                   <li>
                     <a>কর্মকর্তা/কর্মচারী তালিকা</a>
@@ -69,12 +69,12 @@ export default function Navbar() {
                   টেকনোলজি
                 </label>
               </div>
-              <div className="dropdown dropdown-start mx-1">
-                <label tabIndex={0} className="btn btn-ghost rounded-btn">
+              <details className="dropdown mx-1">
+                <summary tabIndex={0} className="btn btn-ghost rounded-btn">
                   <AiOutlineMenu />
                   ছাত্র-ছাত্রীর
                   <IoIosArrowDown />
-                </label>
+                </summary>
                 <ul
                   tabIndex={0}
                   className="menu dropdown-content z-[1] p-2 shadow bg-white text-black rounded-box w-52 mt-4"
@@ -92,17 +92,41 @@ export default function Navbar() {
                     <a>সিভিল</a>
                   </li>
                 </ul>
-              </div>
+              </details>
               <div className="dropdown dropdown-start mx-1">
                 <label tabIndex={0} className="btn btn-ghost rounded-btn">
                   <BiFoodMenu />
-                  রোটিন
+                  <a>রোটিন</a>
+                  <IoIosArrowDown />
                 </label>
+                <ul
+                  tabIndex={0}
+                  className="menu dropdown-content z-[1] p-2 shadow bg-white text-black rounded-box w-52 mt-4"
+                >
+                  <li>
+                    <Link
+                      href={
+                        "https://dschool2.appsosis.com/notice/oomcWIb1bgjzKjppwiSrhkQBwicnTMELU8XiyKTO.pdf"
+                      }
+                    >
+                      ক্লাস রুটিন{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={
+                        "https://dschool2.appsosis.com/notice/3UWhSicTITsDMHz7DTEeieVrwDXjcUYLbL0171FP.pdf"
+                      }
+                    >
+                      পরীক্ষা রুটিন{" "}
+                    </Link>
+                  </li>
+                </ul>
               </div>
               <div className="dropdown dropdown-start mx-1">
                 <label tabIndex={0} className="btn btn-ghost rounded-btn">
                   <BiImage />
-                  ফটো গ্যালারী
+                  <Link href={"/gallery"}>ফটো গ্যালারী</Link>
                 </label>
               </div>
             </div>

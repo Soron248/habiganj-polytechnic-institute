@@ -5,7 +5,7 @@ import { GrDocumentPdf } from "react-icons/gr";
 const CommonDataTable = ({ data, asset }) => {
   return (
     <>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto my-10">
         <table className="table text-black">
           {/* head */}
           <thead className="text-black text-sm text-center">
@@ -28,13 +28,23 @@ const CommonDataTable = ({ data, asset }) => {
                 const year = date.getFullYear();
 
                 const formattedDate = `${day}/${month}/${year}`;
+
                 return (
                   <tr className="border-none" key={data.id}>
                     <th>{data.id}</th>
                     <td>{data.name}</td>
                     <td>{formattedDate}</td>
+
                     <td>
-                      <Link href={`${asset}/${data.uploadfile}`}>
+                      <Link
+                        href={{
+                          pathname: "/pdf",
+                          query: {
+                            asset: asset,
+                            path: data.uploadfile,
+                          },
+                        }}
+                      >
                         <GrDocumentPdf className="w-fit m-auto text-3xl" />
                       </Link>
                     </td>

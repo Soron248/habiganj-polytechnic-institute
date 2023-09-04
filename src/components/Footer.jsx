@@ -13,11 +13,11 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="max-w-md md:max-w-6xl h-80 m-auto bg-cyan-900 flex justify-between items-center text-white px-20">
-        <div>
+      <div className="max-w-md md:max-w-6xl  m-auto bg-cyan-900 flex flex-col md:flex-row justify-between items-center text-white p-10">
+        <div className="my-5">
           <Image src={logo} alt="logo" className="w-52" />
         </div>
-        <div>
+        <div className="my-5 text-center md:text-left">
           <h1 className="text-xl font-bold mb-5">মেনো</h1>
           <div className="font-thin">
             <p>টেকনোলজি</p>
@@ -26,8 +26,8 @@ const Footer = () => {
             <p>শিক্ষক গণের তালিকা</p>
           </div>
         </div>
-        <div>
-          <h1 className="text-xl font-bold mb-5">বিশেষ লিংক</h1>
+        <div className="my-5 text-center md:text-left">
+          <h1 className="text-xl font-bold mb-5 ">বিশেষ লিংক</h1>
           <div className="font-thin">
             <p>কারিগরি শিক্ষা বোর্ড</p>
             <p>কারিগরি শিক্ষা অধিদপ্তর</p>
@@ -35,19 +35,19 @@ const Footer = () => {
             <p>বিডি জবস</p>
           </div>
         </div>
-        <div>
+        <div className="my-5 text-center md:text-left">
           <div>
             <h1 className="text-xl font-bold mb-5">যোগাযোগ</h1>
             <div className="font-thin">
-              <p>
+              <p className="flex justify-center items-center md:justify-start">
                 <AiFillHome className="mr-5" />
                 হবিগঞ্জ পলিটেকনিক ইন্সটিটিউট,
               </p>
               <p>গোপায়া, হবিগঞ্জ</p>
-              <p>
+              <p className="flex justify-center items-center md:justify-start">
                 <FiMail className="mr-5" /> info@hpi.gov.bd
               </p>
-              <p>
+              <p className="flex justify-center items-center md:justify-start">
                 <AiOutlinePhone className="mr-5" /> + 880123478
               </p>
             </div>

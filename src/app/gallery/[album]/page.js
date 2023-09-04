@@ -43,14 +43,14 @@ const page = ({ params }) => {
   };
 
   return (
-    <main className="max-w-md md:max-w-6xl m-auto px-5 bg-white grid grid-cols-4 gap-4">
-      <div className="w-full col-span-3 flex gap-4">
+    <main className="max-w-md md:max-w-6xl m-auto px-5 bg-white flex flex-col md:grid md:grid-cols-4 gap-4">
+      <div className="w-full md:col-span-3 flex  flex-col items-center md:items-start md:flex-row gap-4">
         {album &&
           album.map((data, index) => {
             return (
               <div
                 key={data.gi_id}
-                className="w-52 h-fit cursor-pointer"
+                className="w-52 h-fit cursor-pointer m-5 md:my-0"
                 onClick={() => openModal(index)}
               >
                 <Image
@@ -58,6 +58,7 @@ const page = ({ params }) => {
                   alt="image"
                   width={500}
                   height={500}
+                  className="rounded-lg"
                 />
               </div>
             );
@@ -73,22 +74,23 @@ const page = ({ params }) => {
         shouldCloseOnOverlayClick={true}
         ariaHideApp={false}
       >
-        <div className="modal-slider">
+        <div className=" modal-slider">
           <Image
             src={asset + "/" + album[selectedImageIndex]?.gi_image}
             alt="image"
+            className="w-fit"
             width={500}
             height={500}
           />
           <div className="flex justify-between">
             <button
-              className="modal-slider-btn rounded-xl"
+              className="w-10 modal-slider-btn rounded-full mt-5"
               onClick={goToNextImage}
             >
               &gt;
             </button>
             <button
-              className="modal-slider-btn rounded-xl"
+              className="w-10 modal-slider-btn rounded-full mt-5"
               onClick={goToPrevImage}
             >
               &lt;

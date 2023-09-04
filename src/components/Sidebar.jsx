@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className=" flex flex-col justify-center items-center pl-5 text-black">
+    <div className="flex flex-col justify-center items-center pl-5 text-black">
       <div className="w-full shadow-xl border rounded-md mb-5">
         <h1 className="text-center py-2 bg-slate-200">অধ্যক্ষ </h1>
         <Image src={sir} alt="sir" className="w-20 h-20 m-auto my-8" />

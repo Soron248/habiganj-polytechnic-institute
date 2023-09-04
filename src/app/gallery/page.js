@@ -22,28 +22,30 @@ const page = () => {
     fetchapi(api);
   }, []);
   return (
-    <main className="max-w-md md:max-w-6xl m-auto px-5 bg-white grid grid-cols-4 gap-4">
-      {album &&
-        album.map((data) => {
-          return (
-            <div
-              className="w-56 col-span-3 bg-slate-100 h-fit rounded-lg"
-              key={data.gl_id}
-            >
-              <Link href={`/gallery/${data.gl_id}`}>
-                <Image
-                  src={asset + "/" + data.gl_featured}
-                  alt="album-logo"
-                  width={500}
-                  height={500}
-                />
-              </Link>
-              <h1 className="text-center text-lg py-2 text-black">
-                {data.gl_name}
-              </h1>
-            </div>
-          );
-        })}
+    <main className="max-w-md md:max-w-6xl m-auto px-5 bg-white flex flex-col md:grid md:grid-cols-4 gap-4">
+      <div className="w-full md:col-span-3 flex flex-col items-center md:items-start md:flex-row">
+        {album &&
+          album.map((data) => {
+            return (
+              <div
+                className="w-56  bg-slate-100 h-fit rounded-lg"
+                key={data.gl_id}
+              >
+                <Link href={`/gallery/${data.gl_id}`}>
+                  <Image
+                    src={asset + "/" + data.gl_featured}
+                    alt="album-logo"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <h1 className="text-center text-lg py-2 text-black">
+                  {data.gl_name}
+                </h1>
+              </div>
+            );
+          })}
+      </div>
       <Sidebar />
     </main>
   );

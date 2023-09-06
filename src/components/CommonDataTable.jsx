@@ -1,8 +1,10 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { GrDocumentPdf } from "react-icons/gr";
 
 const CommonDataTable = ({ data, asset }) => {
+  const [pdf, setPdf] = useState("");
   return (
     <>
       <div className="overflow-x-auto my-10">
@@ -28,7 +30,7 @@ const CommonDataTable = ({ data, asset }) => {
                 const year = date.getFullYear();
 
                 const formattedDate = `${day}/${month}/${year}`;
-
+                const path = asset + "/" + data.uploadfile;
                 return (
                   <tr className="border-none" key={data.id}>
                     <th>{data.id}</th>
@@ -36,23 +38,34 @@ const CommonDataTable = ({ data, asset }) => {
                     <td>{formattedDate}</td>
 
                     <td>
-                      <Link
-                        href={{
-                          pathname: "/pdf",
-                          query: {
-                            asset: asset,
-                            path: data.uploadfile,
-                          },
-                        }}
+                      <a
+                        onClick={() => setPdf(path)}
+                        className="cursor-pointer"
                       >
                         <GrDocumentPdf className="w-fit m-auto text-3xl" />
-                      </Link>
+                      </a>
                     </td>
                   </tr>
                 );
               })}
           </tbody>
         </table>
+
+        {pdf && (
+          <div>
+            <object
+              data={pdf}
+              type="application/pdf"
+              className="w-full h-screen my-10"
+            >
+              <embed src={pdf} className="w-full h-screen" title="PDF " />
+            </object>
+
+            <button className="btn w-full mb-5">
+              <Link href={pdf}>Open PDF</Link>
+            </button>
+          </div>
+        )}
       </div>
     </>
   );

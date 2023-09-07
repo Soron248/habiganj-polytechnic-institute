@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ["dschool2.appsosis.com"],
     unoptimized: true,
   },
-  trailingSlash: true,
+  trailingSlash: false,
   output: "export",
 };
 

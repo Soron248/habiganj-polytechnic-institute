@@ -64,17 +64,17 @@ const Footer = () => {
             AppsOsis
           </Link>
         </h2>
-        <div className="flex">
-          <h3>
+        <div className="flex ">
+          <h3 className="text-xs m-1 cursor-pointer">
             <BiLogoFacebook />{" "}
           </h3>
-          <h3>
+          <h3 className="text-xs m-1 cursor-pointer">
             <AiOutlineTwitter />{" "}
           </h3>
-          <h3>
+          <h3 className="text-xs m-1 cursor-pointer">
             <FiMail />{" "}
           </h3>
-          <h3>
+          <h3 className="text-xs m-1 cursor-pointer">
             <BiLogoLinkedin />{" "}
           </h3>
         </div>

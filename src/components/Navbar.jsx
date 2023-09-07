@@ -38,7 +38,11 @@ export default function Navbar() {
                   <Link href="/">
                     <AiFillHome />
                   </Link>
-                  <Link href="/" className=" md:block">
+                  <Link
+                    href="/"
+                    className=" md:block"
+                    onClick={() => setMenuOpen(false)}
+                  >
                     {" "}
                     মূল পেইজ
                   </Link>
@@ -56,10 +60,17 @@ export default function Navbar() {
                   className="menu dropdown-content z-[5] p-2 shadow bg-white text-black rounded-box w-52 mt-4"
                 >
                   <li>
-                    <Link href={"/teacher"}>শিক্ষক গণের তালিকা</Link>
+                    <Link href={"/teacher"} onClick={() => setMenuOpen(false)}>
+                      শিক্ষক গণের তালিকা
+                    </Link>
                   </li>
                   <li>
-                    <Link href={"/committee"}>কর্মকর্তা/কর্মচারী তালিকা</Link>
+                    <Link
+                      href={"/committee"}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      কর্মকর্তা/কর্মচারী তালিকা
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -69,7 +80,11 @@ export default function Navbar() {
                     <MdNewspaper />
                   </Link>
 
-                  <Link href={"/result"} className=" md:block">
+                  <Link
+                    href={"/result"}
+                    className=" md:block"
+                    onClick={() => setMenuOpen(false)}
+                  >
                     ফলাফল
                   </Link>
                 </label>
@@ -86,10 +101,17 @@ export default function Navbar() {
                   className="menu dropdown-content z-[5] p-2 shadow bg-white text-black rounded-box w-52 mt-4"
                 >
                   <li>
-                    <Link href={"/students"}>ছাত্র-ছাত্রী </Link>
+                    <Link href={"/students"} onClick={() => setMenuOpen(false)}>
+                      ছাত্র-ছাত্রী{" "}
+                    </Link>
                   </li>
                   <li>
-                    <Link href={"/class-wise-students"}>ক্লাস অনুযায়ী </Link>
+                    <Link
+                      href={"/class-wise-students"}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      ক্লাস অনুযায়ী{" "}
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -105,10 +127,20 @@ export default function Navbar() {
                   className="menu dropdown-content z-[5] p-2 shadow bg-white text-black rounded-box w-52 mt-4"
                 >
                   <li>
-                    <Link href={"/class-routine"}>ক্লাস রুটিন </Link>
+                    <Link
+                      href={"/class-routine"}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      ক্লাস রুটিন{" "}
+                    </Link>
                   </li>
                   <li>
-                    <Link href={"/exam-routine"}>পরীক্ষা রুটিন </Link>
+                    <Link
+                      href={"/exam-routine"}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      পরীক্ষা রুটিন{" "}
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -117,7 +149,11 @@ export default function Navbar() {
                   <Link href={"/gallery"}>
                     <BiImage />
                   </Link>
-                  <Link href={"/gallery"} className=" md:block">
+                  <Link
+                    href={"/gallery"}
+                    className=" md:block"
+                    onClick={() => setMenuOpen(false)}
+                  >
                     ফটো গ্যালারী
                   </Link>
                 </label>

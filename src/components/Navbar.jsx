@@ -10,6 +10,8 @@ import { PiStudentBold } from "react-icons/pi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../public/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,12 +24,22 @@ export default function Navbar() {
       <div className=" md:static max-w-sm  md:max-w-6xl  h-auto md:h-24 m-auto bg-white px-5 py-1 ">
         <div className="navbar  bg-cyan-900 text-white mb-5">
           <div className=" w-full flex justify-center flex-col items-center">
-            <span
-              className="md:hidden cursor-pointer my-3"
-              onClick={toggleMenu}
-            >
-              {menuOpen ? <ImCross /> : <GiHamburgerMenu />}
-            </span>
+            <div className="md:hidden w-full flex justify-between px-5">
+              <Link href="/">
+                <Image
+                  src={logo}
+                  className="w-16 h-10"
+                  width={500}
+                  height={500}
+                />
+              </Link>
+              <span
+                className=" cursor-pointer my-3 text-2xl"
+                onClick={toggleMenu}
+              >
+                {menuOpen ? <ImCross /> : <GiHamburgerMenu />}
+              </span>
+            </div>
             <div
               className={`md:flex ${
                 menuOpen ? "block" : "hidden"

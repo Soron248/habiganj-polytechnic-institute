@@ -28,6 +28,7 @@ export default function Navbar() {
               <Link href="/">
                 <Image
                   src={logo}
+                  alt="logo"
                   className="w-16 h-10"
                   width={500}
                   height={500}

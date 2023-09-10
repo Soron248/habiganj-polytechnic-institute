@@ -3,14 +3,17 @@ import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal"; // Import the Modal component
+import { useSearchParams } from "next/navigation";
 
-const page = ({ params }) => {
+const page = () => {
+  const search = useSearchParams();
+  const id = search.get("id");
   const [album, setAlbum] = useState([]);
   const [asset, setAsset] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false); // Track modal state
   const [selectedImageIndex, setSelectedImageIndex] = useState(0); // Track selected image index
 
-  const api = `https://dschool2.appsosis.com/api/viewAlbum/${params.album}`;
+  const api = `https://dschool2.appsosis.com/api/viewAlbum/${id}`;
 
   const fetchapi = async (url) => {
     const req = await fetch(url);
@@ -43,7 +46,7 @@ const page = ({ params }) => {
   };
 
   return (
-    <main className="max-w-md md:max-w-6xl m-auto px-5 bg-white flex flex-col md:grid md:grid-cols-4 gap-4">
+    <main className="max-w-sm md:max-w-6xl m-auto px-5 bg-white flex flex-col md:grid md:grid-cols-4 gap-4">
       <div className="w-full md:col-span-3 flex  flex-col items-center md:items-start md:flex-row gap-4">
         {album &&
           album.map((data, index) => {

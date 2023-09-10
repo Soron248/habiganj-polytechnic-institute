@@ -13,7 +13,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="max-w-md md:max-w-6xl  m-auto bg-cyan-900 flex flex-col md:flex-row justify-between items-center text-white p-10">
+      <div className="max-w-sm md:max-w-6xl  m-auto bg-cyan-900 flex flex-col md:flex-row justify-between items-center text-white p-10">
         <div className="my-5">
           <Image src={logo} alt="logo" className="w-52" />
         </div>
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-md md:max-w-6xl h-16 m-auto bg-cyan-900 border-t-2 border-cyan-950 text-white flex justify-between items-center px-5">
+      <div className="max-w-sm md:max-w-6xl h-16 m-auto bg-cyan-900 border-t-2 border-cyan-950 text-white flex justify-between items-center px-5">
         <h2>
           Design&Developed by{" "}
           <Link
@@ -64,17 +64,17 @@ const Footer = () => {
             AppsOsis
           </Link>
         </h2>
-        <div className="flex">
-          <h3>
+        <div className="flex ">
+          <h3 className="text-xs m-1 cursor-pointer">
             <BiLogoFacebook />{" "}
           </h3>
-          <h3>
+          <h3 className="text-xs m-1 cursor-pointer">
             <AiOutlineTwitter />{" "}
           </h3>
-          <h3>
+          <h3 className="text-xs m-1 cursor-pointer">
             <FiMail />{" "}
           </h3>
-          <h3>
+          <h3 className="text-xs m-1 cursor-pointer">
             <BiLogoLinkedin />{" "}
           </h3>
         </div>

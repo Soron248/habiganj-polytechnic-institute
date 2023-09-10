@@ -20,7 +20,7 @@ const page = () => {
     fetchapi(api);
   }, []);
   return (
-    <main className="max-w-md md:max-w-6xl m-auto px-5 bg-white flex flex-col md:grid md:grid-cols-4 gap-4">
+    <main className="max-w-sm md:max-w-6xl m-auto px-5 bg-white flex flex-col md:grid md:grid-cols-4 gap-4">
       <div className="w-full md:col-span-3 ">
         <CommonDataTable data={data} asset={asset} />
       </div>

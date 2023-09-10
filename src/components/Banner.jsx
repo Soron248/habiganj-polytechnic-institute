@@ -7,7 +7,7 @@ import bnr3 from "../../public/bnr3.jpg";
 const Banner = () => {
   return (
     <>
-      <div className="max-w-md md:max-w-6xl   h-56 m-auto bg-white px-5 py-2">
+      <div className="max-w-sm md:max-w-6xl   h-56 m-auto bg-white px-5 py-2">
         <section className="w-full h-full">
           <div className="carousel w-full h-full">
             <div id="slide1" className="carousel-item relative w-full">

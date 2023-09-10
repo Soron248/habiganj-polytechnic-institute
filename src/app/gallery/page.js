@@ -31,7 +31,14 @@ const page = () => {
                 className="w-56  bg-slate-100 h-fit rounded-lg"
                 key={data.gl_id}
               >
-                <Link href={`/gallery/${data.gl_id}`}>
+                <Link
+                  href={{
+                    pathname: `/gallery/album`,
+                    query: {
+                      id: JSON.stringify(data.gl_id),
+                    },
+                  }}
+                >
                   <Image
                     src={asset + "/" + data.gl_featured}
                     alt="album-logo"

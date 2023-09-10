@@ -3,14 +3,17 @@ import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal"; // Import the Modal component
+import { useSearchParams } from "next/navigation";
 
-const page = ({ params }) => {
+const page = () => {
+  const search = useSearchParams();
+  const id = search.get("id");
   const [album, setAlbum] = useState([]);
   const [asset, setAsset] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false); // Track modal state
   const [selectedImageIndex, setSelectedImageIndex] = useState(0); // Track selected image index
 
-  const api = `https://dschool2.appsosis.com/api/viewAlbum/${params.album}`;
+  const api = `https://dschool2.appsosis.com/api/viewAlbum/${id}`;
 
   const fetchapi = async (url) => {
     const req = await fetch(url);

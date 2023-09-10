@@ -58,6 +58,9 @@ const Notice = ({ notice }) => {
           </ul>
         )}
       </section>
+      <button type="button" className="btn-sm btn-outline btn-info m-5">
+        <Link href={"/notice"}>সকল নোটিশ</Link>
+      </button>
     </div>
   );
 };
